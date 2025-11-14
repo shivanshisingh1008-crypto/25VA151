@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors: CSS Combinators</title>
+    <style>
+        div> p{color:blue;}
+        p{color:brown;}
+        .text> p{background-color:rgb(224, 195, 158)}
+        .text + p{font-size: 25px;
+        background-color: aqua;} 
+        div + p{font-size: 30px;}
+        a::first-line{color:crimson;}
+        a:visited{color:darkgray;}
+        a:link{background-color: cadetblue;}
+        
+        ul{
+            list-style: display:flex;}
+        ul li{
+            margin: 10px;
+            border-right: 2px solid #F04;
+            padding-right:20px;
+        }
+        ul li::first-child{ /*also write as nth-child(5)*/
+            border-right:0px;
+            color:blueviolet;
+        }
+        ul li::first-letter{
+            font-size: 25px; color:aqua;
+        }
+        .para::first-letter{
+            color:red;
+        }
+        .para::after
+        
+    </style>
+</head>
+<body>
+    
+    <!--first div-->
+    <div class="text">
+        <h1>HELLO ABES</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde modi eius nam, corrupti voluptas quae cum reiciendis nobis aliquid voluptatem totam optio sequi magni quis nihil enim qui, impedit cumque?</p>
+        <a href="#" target="_blank">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, eius ea? Deleniti voluptates commodi non repudiandae assumenda quibusdam maxime sunt labore. Quis voluptatum laborum ullam voluptatibus neque placeat deserunt quae.</p>
+        </a>
+        <!--second div-->
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni dolores a saepe optio. Aspernatur vero ea sit, atque perferendis, animi magni similique qui esse impedit saepe dolorem porro sint!</p>
+
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellat, aperiam illum voluptate unde corrupti eius accusamus placeat. Eos ea magnam dolor qui sunt optio voluptatem tempora reiciendis aut eligendi!</p>
+
+    <!--ul-->
+    <ul>
+        <li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius numquam quia maxime itaque, non perferendis, repellat consectetur optio accusantium nisi debitis excepturi id soluta. Ipsa incidunt expedita sed odio.</p>
+        </li>
+    </ul>
+    </div>
+    <!--first div end-->
+
+    <!--para-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias at quia nesciunt maxime cupiditate dolore quo dolorem rerum fuga saepe ullam excepturi inventore sint, earum quibusdam architecto facilis veniam?</p>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>page</li>
+    </ul>
+</body>
+
+</html>
