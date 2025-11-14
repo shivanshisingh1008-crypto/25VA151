@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Box Layout Example</title>
+  <style>
+    /* Parent box setup */
+    .main-box {
+      display: flex;
+      width: 800px;
+      height: 400px;
+      border: 2px solid #ddd;
+      margin: 40px auto;
+      background: #fff;
+    }
+    /* Orange box at left */
+    .left-box {
+      background: rgb(224, 180, 97);
+      border: 2px solid #fff;
+      flex: 2;
+      margin: 6px 0 6px 6px;
+    }
+    /* Right column wrapper */
+    .right-boxes {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      margin: 6px 6px 6px 0;
+    }
+    /* Top red box */
+    .right-top {
+      background: #d68787;
+      border: 2px solid #fff;
+      flex: 1;
+      margin-bottom: 6px;
+    }
+  
+    /* Bottom red box */
+    .right-bottom {
+      background: #cc8484;
+      border: 2px solid #fff;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="left-box"></div>
+    <div class="right-boxes">
+      <div class="right-top"></div>
+      <div class="right-middle"></div>
+      <div class="right-bottom"></div>
+    </div>
+  </div>
+</body>
+</html>+
