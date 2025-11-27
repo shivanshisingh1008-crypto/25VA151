@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless Headphones - E-commerce Product Page</title>
+    <style>
+        /* Reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for centering the product page */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto; /* margin provides outer spacing */
+            padding: 20px; /* padding adds inner space */
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Product layout using Flexbox for beginner-friendly responsiveness */
+        .product {
+            display: flex;
+            flex-direction: column; /* Stacks image and details vertically on small screens */
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .product {
+                flex-direction: row; /* Side-by-side on larger screens */
+            }
+        }
+
+        /* Product image styling */
+        .product-image {
+            width: 100%;
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover;
+            border: 2px solid #ddd; /* border adds outline */
+            border-radius: 10px;
+            padding: 5px; /* Small padding inside border */
+        }
+        @media (min-width: 768px) {
+            .product-image {
+                width: 400px; /* Wider image on desktop */
+                flex-shrink: 0;
+            }
+        }
+
+        /* Product details section */
+        .product-details {
+            flex: 1;
+            padding: 30px; /* Generous padding for content breathing room */
+            border-left: 3px solid #4CAF50; /* Green accent border */
+            background-color: #fafafa;
+        }
+        @media (max-width: 767px) {
+            .product-details {
+                border-left: none;
+                border-top: 3px solid #4CAF50;
+            }
+        }
+
+        /* Title styling with larger font */
+        .product-title {
+            font-size: 2.5em; /* Large font-size for impact */
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Price styling - prominent green color */
+        .product-price {
+            font-size: 2em;
+            color: #4CAF50; /* Green for positive purchase signal */
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        /* Description paragraph */
+        .product-description {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Features list with custom bullets */
+        .features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        .features li {
+            padding: 10px 0;
+            padding-left: 30px; /* Indent for bullet space */
+            position: relative;
+            font-size: 1.1em;
+        }
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Button styling with hover effect */
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 40px; /* padding for comfortable click area */
+            font-size: 1.3em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Full width for mobile */
+            height: 55px; /* Fixed height for consistency */
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <img src="C:\Users\Shivanshi Singh\Pictures\photo-1613040809024-b4ef7ba99bc3.jpg" alt="Wireless Headphones" class="product-image">
+            
+            <div class="product-details">
+                <h1 class="product-title">Premium Wireless Headphones</h1>
+                
+                <div class="product-price">₹4,999</div>
+                
+                <p class="product-description">
+                    Experience superior sound quality with these premium wireless headphones. 
+                    Enjoy up to 30 hours of battery life, noise cancellation, and crystal-clear calls.
+                </p>
+                
+                <ul class="features">
+                    <li>Bluetooth 5.2 connectivity</li>
+                    <li>Active Noise Cancellation (ANC)</li>
+                    <li>30+ hours battery life</li>
+                    <li>Touch controls & voice assistant</li>
+                    <li>IPX4 sweat & water resistant</li>
+                </ul>
+                
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

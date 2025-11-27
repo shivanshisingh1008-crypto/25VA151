@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout-2</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #efefef;
+    }
+    .container {
+      width: 400px;
+      margin: 30px auto;
+      background: #fff;
+      border: 1px solid #ddd;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 600px;
+    }
+    .header {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #ddd;
+      background: #ccc;
+      padding: 10px;
+      align-items: center;
+    }
+    .logo {
+      flex: 1;
+      text-align: left;
+    }
+    .navigation {
+      flex: 2;
+      text-align: right;
+    }
+    .header-banner {
+      background: #bbb;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      min-height: 300px;
+      background: #ddd;
+    }
+    .sidebar {
+      flex: 1;
+      padding: 10px;
+      background: #bdbdbd;
+      min-width: 80px;
+      text-align: center;
+    }
+    .body-area {
+      flex: 3;
+      padding: 10px;
+      background: #cfcfcf;
+      text-align: center;
+    }
+    .footer {
+      background: #aaa;
+      padding: 10px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Logo</div>
+      <div class="navigation">Navigation</div>
+    </div>
+    <div class="header">Header</div>
+    <div class="main">
+      <div class="sidebar">Side Bar</div>
+      <div class="body-area">Body Area</div>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
+    
+</body>
+</html>
