@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Flexbox Student Card</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0f7fa;
+            padding: 50px;
+            display: flex;
+            justify-content: center; /* Centers card horizontally */
+            align-items: center; /* Centers card vertically */
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column; /* Stack items top to bottom */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #4fc3f7;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 24px;
+            color: #0277bd;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            display: flex; /* Makes items sit side by side */
+            justify-content: space-around; /* Spreads items evenly */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .info div {
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap; /* Wraps to new line */
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .skill {
+            background: #b3e5fc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button {
+            flex: 1; /* Equal width buttons */
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn1 { background: #4fc3f7; }
+        .btn2 { background: #29b6f6; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="photo">
+             <img width="90" height="100"src="C:\Users\Shivanshi Singh\Pictures\360_F_738516903_yapWBhtEEP08eBO8UV0dJIsBpL4GISI7.jpg" alt="Wireless Headphones" class="product-image">
+        </div>
+        <div class="name">AMAYRA</div>
+        
+        <div class="info">
+            <div>B.Tech<br>1nd Year</div>
+            <div>CGPA<br>8.5</div>
+        </div>
+        
+        <div class="skills">
+            <span class="skill">C++</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Flexbox</span>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn1">Portfolio</button>
+            <button class="btn2">Resume</button>
+        </div>
+    </div>
+</body>
+</html>
