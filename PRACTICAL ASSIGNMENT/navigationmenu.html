@@ -1,88 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Navigation Menu</title>
-  <style>
-    body {
-      font-family: Arial;
-    }
-
-    /* Block element: full width */
-    .block {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: block; /* full width - new line */
-    }
-
-    /* Inline element: flows like text */
-    .inline {
-      background-color: #2196F3;
-      color: white;
-      padding: 8px;
-      display: inline; 
-      margin-right: 5px;
-    }
-
-    /* Inline-block element: inline but supports width and height */
-    .inline-block {
-      background-color: #f44336;
-      color: white;
-      padding: 8px;
-      width: 120px;
-      height: 35px;
-      display: inline-block; 
-      margin-right: 5px;
-      text-align: center;
-      line-height: 35px; 
-    }
-
-    /* Float left example */
-    .float-left {
-      float: left;
-      background-color: #ff9800;
-      color: black;
-      width: 120px;
-      height: 35px;
-      text-align: center;
-      line-height: 35px;
-      margin-right: 5px;
-    }
-
-    /* Clear floats */
-    .clear {
-      clear: both; /* moves content below floated elements */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        /* Block Display Example */
+        .nav-block {
+            background-color: #333;
+            padding: 14px 0;
+            text-align: center;
+        }
+        .nav-block ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-block li {
+            display: block; /* Takes full width, stacks vertically */
+            margin: 0;
+        }
+        .nav-block a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav-block a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Inline Display Example */
+        .nav-inline {
+            background-color: #4CAF50;
+            padding: 14px 0;
+            text-align: center;
+        }
+        .nav-inline ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline; /* Flows inline, no width/height control */
+        }
+        .nav-inline li {
+            display: inline;
+        }
+        .nav-inline a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav-inline a:hover {
+            background-color: #45a049;
+        }
+        
+        /* Inline-Block Display Example */
+        .nav-inline-block {
+            background-color: #2196F3;
+            padding: 14px 0;
+            text-align: center;
+        }
+        .nav-inline-block ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0; /* Removes whitespace between inline-block items */
+        }
+        .nav-inline-block li {
+            display: inline-block; /* Inline flow + block properties (width/height/margins) */
+            font-size: 18px; /* Reset font-size */
+        }
+        .nav-inline-block a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        .nav-inline-block a:hover {
+            background-color: #0b7dda;
+        }
+        
+        /* Float Example */
+        .nav-float {
+            background-color: #ff9800;
+            padding: 14px 0;
+            overflow: hidden; /* Clearfix for floats */
+        }
+        .nav-float ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-float li {
+            float: left; /* Floats left, content wraps around */
+        }
+        .nav-float a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav-float a:hover {
+            background-color: #e68900;
+        }
+        .nav-float::after {
+            content: "";
+            display: table;
+            clear: both; /* Modern clearfix */
+        }
+        
+        /* Clear Example */
+        .clear-demo {
+            background-color: #9c27b0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .clear-demo .float-left {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: #f44336;
+            margin: 10px;
+        }
+        .clear-demo .float-right {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background: #4CAF50;
+            margin: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-  <h2><b><U>NAVIGATION MENU</U></b></h2>
+    <h2>1. Block Display (Vertical Menu)</h2>
+    <nav class="nav-block">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <h3>Block Element    (Full width)</h3>
-  <div class="block">Block Menu Item</div>
+    <h2>2. Inline Display (Horizontal, Limited Control)</h2>
+    <nav class="nav-inline">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <h3>Inline Elements (Flow like text)</h3>
-  <span class="inline">Home </span>
-  <span class="inline">About </span>
-  <span class="inline">Campus</span>
+    <h2>3. Inline-Block Display (Horizontal with Block Properties)</h2>
+    <nav class="nav-inline-block">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <h3>Inline-block Elements    (Box controls size)</h3>
-  <div class="inline-block">Academic</div>
-  <div class="inline-block">Placement</div>
-  <div class="inline-block">Research</div>
+    <h2>4. Float Layout (Horizontal with Float)</h2>
+    <nav class="nav-float">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <h3>Float Left Elements</h3>
-  <div class="float-left">Float 1</div>
-  <div class="float-left">Float 2</div>
-  <div class="float-left">Float 3</div>
-
-  <!-- Clear floats so below content is not beside float -->
-  <div class="clear"><br></br>
-    <input type="button" value="clear"> </div>
-
-
+    <h2>5. Clear Property Demo</h2>
+        <p>This text wraps around the floated elements.</p>
+        <div class="clear-both">Clear: both - New line starts here</div>
+    </div>
 
 </body>
 </html>
