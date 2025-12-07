@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Grid - Responsive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #e9b2b2;
+    }
+
+    h1 {
+      text-align: center;
+      background: #963946;
+      color: rgb(245, 246, 243);
+      padding: 20px;
+    }
+
+    
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    
+    .card {
+      background: rgb(171, 199, 217);
+      border: 1px solid #7ba6bc;
+      padding: 15px;
+      width: 100%;     
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .img {
+      width: 100%;
+      height: 120px;
+      background: #7ba6bc;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price {
+      color: red;
+      font-size: 18px;
+      margin-bottom: 15px;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: orange;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    
+    @media (min-width: 600px) {
+      .card { width: calc(50% - 15px); }
+    }
+
+    
+    @media (min-width: 900px) {
+      .card { width: calc(33.33% - 15px); }
+    }
+
+    /* DESKTOP: 4 CARDS PER ROW */
+    @media (min-width: 1200px) {
+      .card { width: calc(25% - 15px); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Product Grid (Responsive)</h1>
+
+<div class="grid">
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\laptop-stone-surface-sea-background_1232-430.avif" alt="phone" class="product-image">
+    </div>
+    <h3>Laptop</h3>
+    <div class="price">&#8377;75,000</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\OIP (3).jpg" alt="phone" class="product-image"></div>
+    <h3>Phone</h3>
+    <div class="price">&#8377;35,000</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\OIP (2).jpg" alt="Wireless Headphones" class="product-image">
+    </div>
+    <h3>Headphones</h3>
+    <div class="price">&#8377; 2,500</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\shiny-blue-computer-mouse-for-modern-business-generated-by-ai-photo.jpg" alt="Wireless Headphones" class="product-image">
+    </div>
+    <h3>Mouse</h3>
+    <div class="price">&#8377; 800</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\pexels-shottrotter-1309766.jpg" alt="Wireless Headphones" class="product-image">
+    </div>
+    <h3>Keyboard</h3>
+    <div class="price">&#8377; 1,500</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+
+  <div class="card">
+    <div class="img">
+      <img width="500" height="130"src="C:\Users\Shivanshi Singh\Pictures\view-computer-monitor-display_23-2150757453.avif" alt="Wireless Headphones" class="product-image">
+    </div>
+    <h3>Monitor</h3>
+    <div class="price">&#8377; 10,000</div>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
+</div>
+
+</body>
+</html>
